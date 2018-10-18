@@ -6,7 +6,6 @@ import (
 
 	"fmt"
 	"github.com/paradigm-network/paradigm/network/actor/internal/queue/mpsc"
-	"github.com/ontio/ontology-eventbus/log"
 )
 
 type Statistics interface {
@@ -104,7 +103,6 @@ func (m *defaultMailbox) run() {
 			var buf [1024]byte
 			runtime.Stack(buf[:], true)
 			fmt.Println(string(buf[:]))
-			plog.Debug("[ACTOR] Recovering", log.Object("actor", m.invoker), log.Object("reason", r), log.Stack(), log.Object("stack", string(buf[:])))
 			m.invoker.EscalateFailure(r, msg)
 		}
 	}()
