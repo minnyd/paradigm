@@ -1,8 +1,12 @@
-hash: 90a5da89120f8fdc440b10b5b10f4522406503104d851da79a27d1f6074a96c8
-updated: 2018-09-14T11:36:47.829724+08:00
+hash: bd3cd1687fe8e45b69ed568a49084bf2dc19dddbe8ed3ce540c41aeb803ebe20
+updated: 2018-10-18T10:08:48.097352+08:00
 imports:
 - name: github.com/AndreasBriese/bbloom
   version: 343706a395b76e5ca5c7dca46a5d937b48febc74
+- name: github.com/btcsuite/btcd
+  version: 67e573d211ace594f1366b4ce9d39726c4b19bd0
+  subpackages:
+  - btcec
 - name: github.com/dgraph-io/badger
   version: b65e2a3f653cc42acc70ae9eba104de990986c84
   subpackages:
@@ -13,12 +17,39 @@ imports:
   - "y"
 - name: github.com/dgryski/go-farm
   version: 2de33835d10275975374b37b2dcfd22c9020a1f5
+- name: github.com/emirpasic/gods
+  version: 1615341f118ae12f353cc8a983f35b584342c9b3
+  subpackages:
+  - containers
+  - lists
+  - lists/singlylinkedlist
+  - stacks
+  - stacks/linkedliststack
+  - utils
+- name: github.com/gogo/protobuf
+  version: fd322a3c49630fe6d05737e2b7d9426e6680e28d
+  subpackages:
+  - gogoproto
+  - proto
+  - protoc-gen-gogo/descriptor
 - name: github.com/golang/protobuf
   version: 1643683e1b54a9e88ad26d98f81400c8c9d9f4f9
   subpackages:
   - proto
+- name: github.com/google/uuid
+  version: 9b3b1e0f5f99ae461456d768e7d301a7acdaa2d8
+- name: github.com/gorilla/mux
+  version: deb579d6e030503f430978ee229008b9bc912d40
+- name: github.com/hashicorp/golang-lru
+  version: 20f1fb78b0740ba8c3cb143a61e86ba5c8669768
+  subpackages:
+  - simplelru
 - name: github.com/itchyny/base58-go
   version: 8739d1dc6e0ff8db2d786430b1862f2dff5f434b
+- name: github.com/orcaman/concurrent-map
+  version: b28018939af9022337862b94a463abb18abb3e0e
+- name: github.com/pborman/uuid
+  version: 8b1b92947f46224e3b97bb1a3a5b0382be00d31e
 - name: github.com/pkg/errors
   version: 645ef00459ed84a119197bfb8d8205042c6df63d
 - name: github.com/rs/zerolog
@@ -26,6 +57,16 @@ imports:
   subpackages:
   - internal/cbor
   - internal/json
+  - log
+- name: github.com/Workiva/go-datastructures
+  version: f07cbe3f82ca2fd6e5ab94afce65fe43319f675f
+  subpackages:
+  - queue
+- name: golang.org/x/crypto
+  version: 0c41d7ab0a0ee717d4590a44bcb987dfd9e183eb
+  subpackages:
+  - pbkdf2
+  - scrypt
 - name: golang.org/x/net
   version: c73622c77280266305273cb545f54516ced95b93
   subpackages:
@@ -36,9 +77,21 @@ imports:
   version: b98136db334ff9cb24f28a68e3be3cb6608f7630
   subpackages:
   - unix
+- name: gopkg.in/fatih/set.v0
+  version: 2c768e3c5489976167bfc42b5c7c92ca783f4389
 - name: gopkg.in/urfave/cli.v1
   version: cfb38830724cc34fedffe9a2a29fb54fa9169cd1
 testImports:
+- name: github.com/cespare/cp
+  version: 118c73cfdf4dfc44f5cd1efa4ee578ebea52767f
+- name: github.com/davecgh/go-spew
+  version: 04cdfd42973bb9c8589fd6a731800cf222fde1a9
+  subpackages:
+  - spew
+- name: github.com/pmezard/go-difflib
+  version: d8ed2627bdf02c080bf22230dbb337003b7aba2d
+  subpackages:
+  - difflib
 - name: github.com/stretchr/testify
   version: 2aa2c176b9dab406a6970f6a55f513e8a8c8b18f
   subpackages:
